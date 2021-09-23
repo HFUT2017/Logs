@@ -1,7 +1,6 @@
 module Logs
 
 require (
-	github.com/DataDog/zstd v1.4.8 // indirect
 	github.com/Shopify/sarama v1.29.1
 	github.com/coreos/bbolt v1.3.4 // indirect
 	github.com/coreos/etcd v3.3.25+incompatible // indirect
@@ -11,7 +10,6 @@ require (
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible // indirect
 	github.com/dustin/go-humanize v1.0.0 // indirect
 	github.com/fsnotify/fsnotify v1.4.7 // indirect
-	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
 	github.com/golang/snappy v0.0.4 // indirect
 	github.com/google/btree v1.0.1 // indirect
 	github.com/google/uuid v1.3.0 // indirect
@@ -21,6 +19,7 @@ require (
 	github.com/grpc-ecosystem/grpc-gateway v1.16.0 // indirect
 	github.com/hpcloud/tail v1.0.0
 	github.com/jonboulle/clockwork v0.2.2 // indirect
+	github.com/olivere/elastic/v7 v7.0.29
 	github.com/pierrec/lz4 v2.6.1+incompatible // indirect
 	github.com/prometheus/client_golang v1.11.0 // indirect
 	github.com/soheilhy/cmux v0.1.5 // indirect

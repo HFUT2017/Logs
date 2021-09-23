@@ -24,8 +24,8 @@ func main() {
 	defer cli.Close()
 	// put
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
-	value := `[{"path":"./my.log","topic":"mysql_log"},{"path":"./redis.log","topic":"redis_log"}]`
-	_, err = cli.Put(ctx, "/xxx", value)
+	value := `[{"path":"./my.log","topic":"web_log"},{"path":"./redis.log","topic":"redis_log"}]`
+	_, err = cli.Put(ctx, "/logagent/192.168.11.239/collect_config", value)
 	cancel()
 	if err != nil {
 		fmt.Printf("put to etcd failed, err:%v\n", err)
@@ -33,7 +33,7 @@ func main() {
 	}
 	// get
 	ctx, cancel = context.WithTimeout(context.Background(), time.Second)
-	resp, err := cli.Get(ctx, "/logagent/%s/collect_config")
+	resp, err := cli.Get(ctx, "/logagent/192.168.11.239/collect_config")
 	cancel()
 	if err != nil {
 		fmt.Printf("get from etcd failed, err:%v\n", err)
